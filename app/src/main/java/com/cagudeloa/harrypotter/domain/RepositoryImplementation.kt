@@ -8,14 +8,14 @@ import com.cagudeloa.harrypotter.vo.Resource
 
 class RepositoryImplementation(private val dataSource: DataSource): Repository {
     override fun getStudents(): Resource<List<Student>> {
-        return dataSource.getStudentsList()
+        return dataSource.generateStudentsList
     }
 
     override fun getStaff(): Resource<List<Staff>> {
-        return dataSource.getStaffList()
+        return dataSource.generateStaffList
     }
 
     override fun getHouse(): Resource<List<House>> {
-        return dataSource.getHouseList()
+        return dataSource.generateHouseList
     }
 }
