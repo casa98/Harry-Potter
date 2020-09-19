@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_categoriesFragment_to_chosenCategoryFragment"
             app:destination="@id/chosenCategoryFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
     </fragment>
     <fragment
         android:id="@+id/chosenCategoryFragment"
@@ -28,4 +31,9 @@
         android:name="com.cagudeloa.harrypotter.DetailsFragment"
         android:label="Details"
         tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.cagudeloa.harrypotter.QuizFragment"
+        android:label="Harry Potter Quiz"
+        tools:layout="@layout/fragment_quiz" />
 </navigation>
