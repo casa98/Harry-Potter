@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.cagudeloa.harrypotter.CategoriesFragment"
-        android:label="Choose a category"
+        android:name="com.cagudeloa.harrypotter.ui.CategoriesFragment"
+        android:label="Harry Potter"
         tools:layout="@layout/fragment_categories">
         <action
             android:id="@+id/action_categoriesFragment_to_chosenCategoryFragment"
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/chosenCategoryFragment"
-        android:name="com.cagudeloa.harrypotter.ChosenCategoryFragment"
+        android:name="com.cagudeloa.harrypotter.ui.ChosenCategoryFragment"
         android:label="Chosen category"
         tools:layout="@layout/fragment_chosen_category">
         <action
@@ -28,12 +28,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.cagudeloa.harrypotter.DetailsFragment"
+        android:name="com.cagudeloa.harrypotter.ui.DetailsFragment"
         android:label="Details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.cagudeloa.harrypotter.QuizFragment"
+        android:name="com.cagudeloa.harrypotter.ui.QuizFragment"
         android:label="Harry Potter Quiz"
         tools:layout="@layout/fragment_quiz" />
 </navigation>
