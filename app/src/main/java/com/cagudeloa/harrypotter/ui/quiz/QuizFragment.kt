@@ -1,4 +1,4 @@
-package com.cagudeloa.harrypotter.ui
+package com.cagudeloa.harrypotter.ui.quiz
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

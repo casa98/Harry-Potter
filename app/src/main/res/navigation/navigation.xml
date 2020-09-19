@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.cagudeloa.harrypotter.ui.CategoriesFragment"
+        android:name="com.cagudeloa.harrypotter.ui.character.CategoriesFragment"
         android:label="Harry Potter"
         tools:layout="@layout/fragment_categories">
         <action
@@ -16,10 +16,13 @@
         <action
             android:id="@+id/action_categoriesFragment_to_quizFragment"
             app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_houseFragment"
+            app:destination="@id/houseFragment" />
     </fragment>
     <fragment
         android:id="@+id/chosenCategoryFragment"
-        android:name="com.cagudeloa.harrypotter.ui.ChosenCategoryFragment"
+        android:name="com.cagudeloa.harrypotter.ui.character.ChosenCategoryFragment"
         android:label="Chosen category"
         tools:layout="@layout/fragment_chosen_category">
         <action
@@ -28,12 +31,26 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.cagudeloa.harrypotter.ui.DetailsFragment"
+        android:name="com.cagudeloa.harrypotter.ui.character.DetailsFragment"
         android:label="Details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.cagudeloa.harrypotter.ui.QuizFragment"
+        android:name="com.cagudeloa.harrypotter.ui.quiz.QuizFragment"
         android:label="Harry Potter Quiz"
         tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/houseFragment"
+        android:name="com.cagudeloa.harrypotter.ui.house.HouseFragment"
+        android:label="Harry Potter Houses"
+        tools:layout="@layout/fragment_house" >
+        <action
+            android:id="@+id/action_houseFragment_to_detailHouseFragment"
+            app:destination="@id/detailHouseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailHouseFragment"
+        android:name="com.cagudeloa.harrypotter.ui.house.DetailHouseFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_detail_house" />
 </navigation>

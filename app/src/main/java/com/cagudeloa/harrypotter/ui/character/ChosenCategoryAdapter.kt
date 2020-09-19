@@ -1,4 +1,4 @@
-package com.cagudeloa.harrypotter.ui
+package com.cagudeloa.harrypotter.ui.character
 
 import android.content.Context
 import android.view.LayoutInflater

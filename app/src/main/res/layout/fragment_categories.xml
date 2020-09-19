@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFC8C8"
     android:orientation="vertical"
-    tools:context=".ui.CategoriesFragment">
+    tools:context=".ui.character.CategoriesFragment">
 
     <TextView
         android:id="@+id/studentsText"

@@ -1,4 +1,4 @@
-package com.cagudeloa.harrypotter.ui
+package com.cagudeloa.harrypotter.ui.character
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -49,9 +49,7 @@ class CategoriesFragment : Fragment() {
                 findNavController().navigate(R.id.action_categoriesFragment_to_chosenCategoryFragment, bundle)
             }
             R.id.housesText -> {
-                val bundle = Bundle()
-                bundle.putString("category", "house")
-                findNavController().navigate(R.id.action_categoriesFragment_to_chosenCategoryFragment, bundle)
+                findNavController().navigate(R.id.action_categoriesFragment_to_houseFragment)
             }
             R.id.quizText -> {
                 findNavController().navigate(R.id.action_categoriesFragment_to_quizFragment)

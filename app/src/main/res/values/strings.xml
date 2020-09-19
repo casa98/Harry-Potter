@@ -7,4 +7,9 @@
     <string name="houses">Houses</string>
     <string name="quiz">Quiz</string>
     <string name="item_image">Item image</string>
+    <string name="ravenclaw_house">Ravenclaw house</string>
+    <string name="hufflepuff_house">Hufflepuff house</string>
+    <string name="slytherin_house">Slytherin house</string>
+    <string name="gryffindor_house">Gryffindor house</string>
+    <string name="tap_one_to_view_more_info">Tap one to view more info:</string>
 </resources>
