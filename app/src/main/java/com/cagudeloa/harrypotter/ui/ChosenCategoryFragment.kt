@@ -9,17 +9,19 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cagudeloa.harrypotter.R
 import com.cagudeloa.harrypotter.data.DataSource
+import com.cagudeloa.harrypotter.data.model.Student
 import com.cagudeloa.harrypotter.domain.RepositoryImplementation
 import com.cagudeloa.harrypotter.ui.viewmodel.ChosenCategoryViewModel
 import com.cagudeloa.harrypotter.ui.viewmodel.ViewModelFactory
 import com.cagudeloa.harrypotter.vo.Resource
 import kotlinx.android.synthetic.main.fragment_chosen_category.*
 
-class ChosenCategoryFragment : Fragment() {
+class ChosenCategoryFragment : Fragment(), ChosenCategoryAdapter.OnItemClickListener {
 
     private lateinit var category: String
     private val viewModel by viewModels<ChosenCategoryViewModel> { ViewModelFactory(RepositoryImplementation(DataSource())) }
@@ -49,7 +51,7 @@ class ChosenCategoryFragment : Fragment() {
                 }
                 is Resource.Success -> {
                     progressBarLayout.visibility = View.GONE
-                    myRecyclerView.adapter = ChosenCategoryAdapter(requireContext(), studentsList.data)
+                    myRecyclerView.adapter = ChosenCategoryAdapter(requireContext(), this, studentsList.data,)
                 }
                 is Resource.Failure -> {
                     progressBarLayout.visibility = View.GONE
@@ -62,6 +64,13 @@ class ChosenCategoryFragment : Fragment() {
     private fun setupRecyclerView(){
         myRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         myRecyclerView.addItemDecoration(DividerItemDecoration(requireContext(),DividerItemDecoration.VERTICAL))
+    }
+
+    override fun onItemClick(student: Student) {
+        // This is triggered when an item is clicked
+        val bundle = Bundle()
+        bundle.putParcelable("student", student)
+        findNavController().navigate(R.id.action_chosenCategoryFragment_to_detailsFragment, bundle)
     }
 
 }

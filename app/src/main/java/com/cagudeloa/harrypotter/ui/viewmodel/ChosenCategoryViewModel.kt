@@ -23,15 +23,6 @@ class ChosenCategoryViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
-    val fetchStaffList = liveData(Dispatchers.IO){
-        emit(Resource.Loading())
-        try {
-            emit(repository.getStaff())
-        }catch (e: Exception){
-            emit(Resource.Failure(e))
-        }
-    }
-
     val fetchHouseList = liveData(Dispatchers.IO){
         emit(Resource.Loading())
         try {

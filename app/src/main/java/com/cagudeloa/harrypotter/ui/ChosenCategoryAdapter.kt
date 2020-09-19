@@ -13,14 +13,20 @@ import kotlinx.android.synthetic.main.item_row.view.*
 
 class ChosenCategoryAdapter(
     private val context: Context,
+    private val itemClickListener: OnItemClickListener,
     private val studentsList: List<Student>
 ): RecyclerView.Adapter<BaseViewHolder<*>>() {
 
-    class ChosenCategoryViewHolder(itemView: View): BaseViewHolder<Student>(itemView){
+    interface OnItemClickListener{
+        fun onItemClick(listStudent: Student)
+    }
+
+    inner class ChosenCategoryViewHolder(itemView: View): BaseViewHolder<Student>(itemView){
         override fun bind(item: Student, position: Int) {
             Picasso.get().load(item.image).into(itemView.itemImage)
             itemView.nameText.text = item.name
             itemView.anotherText.text = "House: ${item.house}"
+            itemView.setOnClickListener { itemClickListener.onItemClick(item) }
         }
 
     }

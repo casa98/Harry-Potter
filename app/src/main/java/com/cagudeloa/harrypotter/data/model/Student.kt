@@ -1,5 +1,9 @@
 package com.cagudeloa.harrypotter.data.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Student(
     //val actor: String = "",
     //val alive: Boolean = false,
@@ -17,4 +21,4 @@ data class Student(
     //val species: String = "",
     //val wand: String = "",      // TODO: May cause errors
     //val yearOfBirth: Int = 0
-)
+): Parcelable
