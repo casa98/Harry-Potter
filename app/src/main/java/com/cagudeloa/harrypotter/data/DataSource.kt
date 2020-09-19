@@ -14,8 +14,8 @@ class DataSource {
         House("", "Ravenclaw", "A regular house")
     ))
 
-    suspend fun getStudentList(): Resource<List<Student>>{
-        val value = RetrofitClient.webService.getStudents()
+    suspend fun getStudentList(whichPerson: String): Resource<List<Student>>{
+        val value = RetrofitClient.webService.getStudents(whichPerson)
         return Resource.Success(value)
     }
 

@@ -40,7 +40,7 @@ class CategoriesFragment : Fragment() {
         when(option.id){
             R.id.studentsText -> {
                 val bundle = Bundle()
-                bundle.putString("category", "student")
+                bundle.putString("category", "students")
                 findNavController().navigate(R.id.action_categoriesFragment_to_chosenCategoryFragment, bundle)
             }
             R.id.staffText -> {

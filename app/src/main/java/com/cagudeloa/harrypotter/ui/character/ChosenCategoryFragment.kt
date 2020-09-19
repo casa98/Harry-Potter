@@ -32,6 +32,8 @@ class ChosenCategoryFragment : Fragment(), ChosenCategoryAdapter.OnItemClickList
         requireArguments().let {
             category = it.getString("category")!!
         }
+        // Send this info to the ViewModel so that it knows which label I selected, then fetch this info and display it
+        viewModel.setOption(category)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
