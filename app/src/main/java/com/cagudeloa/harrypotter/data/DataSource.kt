@@ -3,18 +3,9 @@ package com.cagudeloa.harrypotter.data
 import com.cagudeloa.harrypotter.data.model.House
 import com.cagudeloa.harrypotter.data.model.Student
 import com.cagudeloa.harrypotter.vo.Resource
+import com.cagudeloa.harrypotter.vo.RetrofitClient
 
 class DataSource {
-
-    /**
-     * Here is where I look for the info from the server, local data for now
-     */
-
-    val generateStudentsList = Resource.Success(listOf(
-        Student("31-07-1980", "male", "Gryffindor", "https://hp-api.herokuapp.com/images/harry.jpg", "Harry Potter", "stag"),
-        Student("19-09-1979", "female", "Gryffindor", "https://hp-api.herokuapp.com/images/hermione.jpeg", "Hermione Granger", "otter"),
-        Student("01-03-1980", "male", "Gryffindor", "https://hp-api.herokuapp.com/images/hermione.jpeg", "Ron Weasley", "Jack Russell terrier")
-    ))
 
     val generateHouseList = Resource.Success(listOf(
         House("", "Gryffindor", "A nice house"),
@@ -22,5 +13,10 @@ class DataSource {
         House("", "Hufflepuff", "Well... no comments"),
         House("", "Ravenclaw", "A regular house")
     ))
+
+    suspend fun getStudentList(): Resource<List<Student>>{
+        val value = RetrofitClient.webService.getStudents()
+        return Resource.Success(value)
+    }
 
 }
