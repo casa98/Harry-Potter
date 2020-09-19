@@ -1,4 +1,4 @@
-package com.cagudeloa.harrypotter.data
+package com.cagudeloa.harrypotter.data.model
 
 data class House (
     val image: String = "",
