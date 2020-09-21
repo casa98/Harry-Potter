@@ -13,4 +13,10 @@
     <string name="gryffindor_house">Gryffindor house</string>
     <string name="tap_one_to_view_more_info">Tap one to view more info:</string>
     <string name="deathly_hallows">Deathly hallows</string>
+    <string name="submit">Submit</string>
+    <string name="try_again">Try again</string>
+    <string name="leave">Leave</string>
+    <string name="play_again">Play again</string>
+    <string name="game_over">Game over</string>
+    <string name="game_won">Game won</string>
 </resources>

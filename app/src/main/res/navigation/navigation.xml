@@ -38,7 +38,14 @@
         android:id="@+id/quizFragment"
         android:name="com.cagudeloa.harrypotter.ui.quiz.QuizFragment"
         android:label="Harry Potter Quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+        <action
+            android:id="@+id/action_quizFragment_to_gameLostFragment"
+            app:destination="@id/gameLostFragment" />
+    </fragment>
     <fragment
         android:id="@+id/houseFragment"
         android:name="com.cagudeloa.harrypotter.ui.house.HouseFragment"
@@ -53,4 +60,36 @@
         android:name="com.cagudeloa.harrypotter.ui.house.DetailHouseFragment"
         android:label="Details"
         tools:layout="@layout/fragment_detail_house" />
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.cagudeloa.harrypotter.ui.quiz.GameWonFragment"
+        android:label="Game result"
+        tools:layout="@layout/fragment_game_won" >
+        <action
+            android:id="@+id/action_gameWonFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/gameWonFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gameWonFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment"
+            app:popUpTo="@id/categoriesFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameLostFragment"
+        android:name="com.cagudeloa.harrypotter.ui.quiz.GameLostFragment"
+        android:label="Game result"
+        tools:layout="@layout/fragment_game_lost" >
+        <action
+            android:id="@+id/action_gameLostFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/gameLostFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gameLostFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment"
+            app:popUpTo="@id/categoriesFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
 </navigation>
