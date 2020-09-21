@@ -19,4 +19,12 @@
     <string name="play_again">Play again</string>
     <string name="game_over">Game over</string>
     <string name="game_won">Game won</string>
+    <string name="character_name">Character name:</string>
+    <string name="house">House:</string>
+    <string name="specie">Specie:</string>
+    <string name="ancestry">Ancestry:</string>
+    <string name="date_of_birth">Date of birth:</string>
+    <string name="eyes_colour">Eyes colour:</string>
+    <string name="actor_name">Actor name:</string>
+    <string name="patronus">Patronus:</string>
 </resources>

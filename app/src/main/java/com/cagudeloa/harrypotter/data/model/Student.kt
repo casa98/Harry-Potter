@@ -6,20 +6,13 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Student(
-    //val actor: String = "",
-    //val alive: Boolean = false,
-    //val ancestry: String = "",
+    val actor: String = "",
+    val ancestry: String = "",
     val dateOfBirth: String = "",
-    //val eyeColour: String = "",
-    val gender: String = "",
-    //val hairColour: String = "",
-    //val hogwartsStaff: Boolean = false,
-    //val hogwartsStudent: Boolean = false,
+    val eyeColour: String = "",
     val house: String = "",
     val image: String = "",
     val name: String = "",
     val patronus: String = "",
-    //val species: String = "",
-    //val wand: String = "",      // TODO: May cause errors
-    //val yearOfBirth: Int = 0
+    val species: String = "",
 ): Parcelable

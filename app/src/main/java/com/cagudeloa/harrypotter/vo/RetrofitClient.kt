@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    val webService by lazy {
+    val webService: WebService by lazy {
         Retrofit.Builder()
             .baseUrl("https://hp-api.herokuapp.com/api/")
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))

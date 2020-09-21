@@ -28,128 +28,36 @@
             app:layout_constraintStart_toEndOf="@+id/dateOfBirthText"
             app:layout_constraintTop_toTopOf="@+id/dateOfBirthText" />
 
-        <TextView
-            android:id="@+id/specieValue"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/specieText"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toEndOf="@+id/specieText"
-            app:layout_constraintTop_toTopOf="@+id/specieText" />
-
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="175dp"
-            android:layout_height="236dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="141dp"
+            android:layout_height="183dp"
+            android:layout_marginStart="16dp"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             android:src="@drawable/potter"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
+            app:layout_constraintGuide_percent="0.98" />
 
         <TextView
             android:id="@+id/characterNameText"
             style="@style/character_info"
             android:layout_width="0dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/character_name"
             android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-        <TextView
-            android:id="@+id/houseText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/house"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/characterNameValue" />
-
-        <TextView
-            android:id="@+id/specieText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/specie"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/houseValue" />
-
-        <TextView
-            android:id="@+id/ancestryText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/ancestry"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/specieValue" />
-
-        <TextView
-            android:id="@+id/patronusText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/patronus"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/ancestryValue" />
-
-        <TextView
-            android:id="@+id/dateOfBirthText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/date_of_birth"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/patronusValue" />
-
-        <TextView
-            android:id="@+id/eyesColourText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/eyes_colour"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/dateOfBirthValue" />
-
-        <TextView
-            android:id="@+id/actorNameText"
-            style="@style/character_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/actor_name"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/eyesColourValue" />
+            app:layout_constraintBottom_toTopOf="@+id/houseText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/characterNameValue"
@@ -159,8 +67,99 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="@+id/characterNameText"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/characterNameText"
             app:layout_constraintTop_toTopOf="@+id/characterNameText" />
+
+        <TextView
+            android:id="@+id/specieText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/specie"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/ancestryText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/houseText" />
+
+        <TextView
+            android:id="@+id/specieValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/specieText"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/specieText"
+            app:layout_constraintTop_toTopOf="@+id/specieText" />
+
+        <TextView
+            android:id="@+id/ancestryText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/ancestry"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/patronusText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/specieText" />
+
+        <TextView
+            android:id="@+id/patronusText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/patronus"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/dateOfBirthText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/ancestryText" />
+
+        <TextView
+            android:id="@+id/eyesColourText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/eyes_colour"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/actorNameText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/dateOfBirthText" />
+
+        <TextView
+            android:id="@+id/actorNameText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/actor_name"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/eyesColourText" />
+
+        <TextView
+            android:id="@+id/dateOfBirthText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/date_of_birth"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/eyesColourText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/patronusText" />
 
         <TextView
             android:id="@+id/houseValue"
@@ -169,8 +168,22 @@
             android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/houseText"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/houseText"
             app:layout_constraintTop_toTopOf="@+id/houseText" />
+
+        <TextView
+            android:id="@+id/houseText"
+            style="@style/character_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/house"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/specieText"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/characterNameText" />
 
         <TextView
             android:id="@+id/ancestryValue"
