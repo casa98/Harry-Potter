@@ -10,25 +10,23 @@
     <Button
         android:id="@+id/playAgainButton"
         style="@style/quiz_buttons"
-        android:layout_width="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/try_again"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/leaveGameButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameOverImage" />
+        app:layout_constraintBottom_toTopOf="@+id/leaveGameButton"
+        app:layout_constraintEnd_toEndOf="@+id/leaveGameButton"
+        app:layout_constraintStart_toStartOf="@+id/leaveGameButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/leaveGameButton"
         style="@style/quiz_buttons"
-        android:layout_width="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/leave"
-        app:layout_constraintBaseline_toBaselineOf="@+id/playAgainButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/playAgainButton" />
+        app:layout_constraintStart_toEndOf="@+id/gameOverImage"
+        app:layout_constraintTop_toBottomOf="@+id/playAgainButton" />
 
     <ImageView
         android:id="@+id/gameOverImage"
@@ -36,8 +34,9 @@
         android:layout_height="250dp"
         android:contentDescription="@string/game_over"
         android:src="@drawable/gameover"
-        app:layout_constraintBottom_toTopOf="@+id/playAgainButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leaveGameButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

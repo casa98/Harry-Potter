@@ -10,8 +10,22 @@
     <style name="character_info">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">17sp</item>
         <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="character_values">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="quiz_buttons">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/round_bg</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>

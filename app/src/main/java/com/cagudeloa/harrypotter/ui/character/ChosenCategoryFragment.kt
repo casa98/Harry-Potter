@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -43,6 +44,12 @@ class ChosenCategoryFragment : Fragment(), ChosenCategoryAdapter.OnItemClickList
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Change AppBar title
+        if(category=="students")
+            (activity as AppCompatActivity).supportActionBar?.title = "Students"
+        else
+            (activity as AppCompatActivity).supportActionBar?.title = "Staff"
+
         setupRecyclerView()
         viewModel.fetchStudentsList.observe(viewLifecycleOwner, {studentsList->
             when(studentsList){

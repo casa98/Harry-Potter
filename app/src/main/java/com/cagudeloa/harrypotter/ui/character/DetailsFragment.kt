@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.cagudeloa.harrypotter.R
 import com.cagudeloa.harrypotter.data.model.Student
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_details.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class DetailsFragment : Fragment() {
 
@@ -35,9 +39,12 @@ class DetailsFragment : Fragment() {
          * Some values are unknown, I want it to display {Unknown} instead of nothing
          */
         val unknown = "Unknown"
+        GlobalScope.launch(Dispatchers.Main) {
+            Picasso.get().load(person.image).placeholder(R.drawable.potter).into(imageView2)
+        }
         characterNameValue.text = person.name
         houseValue.text = person.house
-        specieValue.text = if (person.species.isEmpty()) person.species else unknown
+        specieValue.text = if (person.species.isNotEmpty()) person.species else unknown
         ancestryValue.text = if (person.ancestry.isNotEmpty()) person.ancestry else unknown
         patronusValue.text = if (person.patronus.isNotEmpty()) person.patronus else unknown
         dateOfBirthValue.text = if (person.dateOfBirth.isNotEmpty()) person.dateOfBirth else unknown
