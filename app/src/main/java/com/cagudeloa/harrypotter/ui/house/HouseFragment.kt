@@ -37,19 +37,19 @@ class HouseFragment : Fragment() {
         val bundle = Bundle()
         when(house.id){
             R.id.house1Card -> {
-                bundle.putString("house", "ravenclaw")
+                bundle.putString("house", "Ravenclaw")
                 findNavController().navigate(R.id.action_houseFragment_to_detailHouseFragment, bundle)
             }
             R.id.house2Card -> {
-                bundle.putString("house", "hufflepuff")
+                bundle.putString("house", "Hufflepuff")
                 findNavController().navigate(R.id.action_houseFragment_to_detailHouseFragment, bundle)
             }
             R.id.house3Card -> {
-                bundle.putString("house", "slytherin")
+                bundle.putString("house", "Slytherin")
                 findNavController().navigate(R.id.action_houseFragment_to_detailHouseFragment, bundle)
             }
             R.id.house4Card -> {
-                bundle.putString("house", "gryffindor")
+                bundle.putString("house", "Gryffindor")
                 findNavController().navigate(R.id.action_houseFragment_to_detailHouseFragment, bundle)
             }
         }

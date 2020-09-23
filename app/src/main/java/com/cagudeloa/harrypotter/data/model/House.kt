@@ -1,7 +1,12 @@
 package com.cagudeloa.harrypotter.data.model
 
 data class House (
-    val image: String = "",
-    val name: String = "",
-    val description: String = ""
+    val name: String,
+    val animal: String,
+    val element: String,
+    val founder: String,
+    val ghost: String,
+    val common_room: String,
+    val values:  List<String>,
+    val colors: List<String>
 )

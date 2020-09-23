@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/houseAnimalText"
@@ -69,7 +69,7 @@
     <TextView
         android:id="@+id/textView3"
         style="@style/character_info"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/colors"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseTitleText" />
@@ -77,7 +77,7 @@
     <TextView
         android:id="@+id/textView4"
         style="@style/character_info"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/values"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseColorText" />
@@ -85,7 +85,7 @@
     <TextView
         android:id="@+id/textView5"
         style="@style/character_info"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/animal"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseValuesText" />
@@ -93,7 +93,7 @@
     <TextView
         android:id="@+id/textView6"
         style="@style/character_info"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/element"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseAnimalText" />
@@ -101,7 +101,7 @@
     <TextView
         android:id="@+id/textView7"
         style="@style/character_info"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/ghost"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseElementText" />
@@ -109,7 +109,7 @@
     <TextView
         android:id="@+id/textView8"
         style="@style/character_info"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/founder"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseGhostText" />
@@ -117,7 +117,7 @@
     <TextView
         android:id="@+id/textView9"
         style="@style/character_info"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/common_room"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/houseFounderText" />
@@ -135,14 +135,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95
-" />
+        app:layout_constraintGuide_percent="0.93" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

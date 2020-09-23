@@ -27,4 +27,11 @@
     <string name="eyes_colour">Eyes colour:</string>
     <string name="actor_name">Actor name:</string>
     <string name="patronus">Patronus:</string>
+    <string name="colors">Colors:</string>
+    <string name="values">Values:</string>
+    <string name="animal">Animal:</string>
+    <string name="element">Element:</string>
+    <string name="ghost">Ghost:</string>
+    <string name="founder">Founder:</string>
+    <string name="common_room">Common room:</string>
 </resources>

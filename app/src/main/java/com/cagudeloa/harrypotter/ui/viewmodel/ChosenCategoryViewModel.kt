@@ -29,14 +29,4 @@ class ChosenCategoryViewModel(private val repository: Repository): ViewModel() {
             }
         }
     }
-
-    val fetchHouseList = liveData(Dispatchers.IO){
-        emit(Resource.Loading())
-        try {
-            emit(repository.getHouse())
-        }catch (e: Exception){
-            emit(Resource.Failure(e))
-        }
-    }
-
 }
